@@ -6,9 +6,10 @@ import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
 
 // komponen product card 
 const ProductCard = ({ product }) => (
-  <div className='w-44 inline-block h-auto cursor-pointer hover:scale-105 p-2 ease-in-out duration-300 ' style={{ boxSizing: 'border-box' }}>
+  <div className='w-44 inline-block h-auto cursor-pointer hover:scale-105 p-2 ease-in-out duration-300 '>
     <img className='rounded-2xl rounded-b-none bg-white w-44 h-32' src={product.image} alt='Product' />
-    <h1 className='mt-4 font-bold text-xs text-black'>{product.name}</h1>
+    <h1 className='mt-4 font-bold text-xs text-[#0D6375]'>Rp. {product.price}</h1>
+    <h1 className=' font-bold text-xs text-black mb-2'>{product.name}</h1>
     <p className='text-black text-xs line-clamp-3'>{product.description}</p>
   </div>
 );

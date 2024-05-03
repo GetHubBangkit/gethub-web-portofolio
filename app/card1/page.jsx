@@ -28,13 +28,9 @@ const page = () => {
     ],
   
      "products" : [
-      { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nostrum earum tempora numquam impedit nihil, iusto culpa. Earum voluptas ab cum tempore expedita velit maiores accusantium obcaecati itaque adipisci alias porro facilis nostrum vero, deserunt quae qui fugit reiciendis est? Nobis perspiciatis totam iusto quis fuga, magnam, debitis amet corrupti veniam praesentium fugit esse. Ab dolores excepturi esse voluptatibus consequatur ipsa voluptas ad ea ullam doloremque quo enim ipsum blanditiis nobis dignissimos minima, similique possimus. Sit, vitae inventore non ipsum pariatur voluptate! Officia porro nostrum illo debitis deserunt adipisci eum voluptatibus totam placeat consequatur voluptas, similique nihil ratione eos. Accusantium!' },
-      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....' },
-      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....' },
-      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....' },
-      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....' },
-      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....' },
-     
+      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....', price : '5000,00' },
+      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....', price : '50.000,00' },
+      { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur ....', price : '15.000,00' },
     ]
   };
   
