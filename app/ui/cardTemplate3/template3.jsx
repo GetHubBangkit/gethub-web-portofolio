@@ -122,20 +122,20 @@ const  template3 = ({data}) => {
             
         </div>
         <div className='font-normal text-black text-xs w-full text-wrap'>
-          {data.description}
+          {data.about}
         </div>
         </div>
 
 
         {/* nama bisnis and social media */}
-        <div className='flex justify-start flex-col items-start w-full pb-8'>
-        <div className='flex w-full items-center pb-2 justify-start'>
+        <div className='flex justify-start flex-col items-start w-full pb-6'>
+        <div className='flex w-full items-center pb-4 justify-start'>
           <img src="card3/gethub.png" alt="" className='h-[30px] w-[30px]'/>
           <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
             GetHub Link
           </div>
         </div>
-        <div className='flex relative items-center h-auto w-full  py-4'>
+        <div className='flex relative items-center h-auto w-full'>
           <MdChevronLeft onClick={sliderLeftLink} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100' />
           <div id="sliderLink" className='flex overflow-x-scroll w-full h-full whitespace-nowrap scroll scroll-smooth scrollbar-hide gap-2'>
             {links.map((link, index) => (

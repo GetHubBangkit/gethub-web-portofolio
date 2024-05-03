@@ -1,13 +1,16 @@
 import React from 'react'
 import Template2 from '../ui/cardTemplate2/template2'
 import Template3 from '../ui/cardTemplate3/template3'
+import Template4 from '../ui/cardTemplate4/template4'
+import Template5 from '../ui/cardTemplate5/template5'
+import Template6 from '../ui/cardTemplate6/template6'
 
 const page = () => {
 
     const data = {
-        "theme_hub": 2,
+        "theme_hub": 3 ,
         "is_premium": false,
-        "username": "armanjuliansyah12",
+        "username": "armanjuliansyah",
         "name": "Arman Juliansyah",
         "bussines" : "Software Engineer",
         "phone": "62895322118828",
@@ -51,6 +54,12 @@ const page = () => {
               break;
           case 4:
               Template = Template4;
+              break;
+          case 5:
+              Template = Template5;
+              break;
+          case 6:
+              Template = Template6;
               break;
           default:
               Template = null;

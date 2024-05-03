@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from 'next/link';
 import Button from './ui/home/button.jsx';
 
+
 export default function Home() {
+
   return (
     <div className="flex justify-center items-center h-screen scale-y-200 bg-cyan-400">
       <div className="text-center">

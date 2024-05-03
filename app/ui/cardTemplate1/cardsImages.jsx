@@ -1,5 +1,12 @@
+'use client';
+
 import React from 'react'
+import { useQRCode } from 'next-qrcode';
+
+
 const cardsImages = ({ name, bussines, contact, url, email, codeqr, address }) => {
+
+  const { Canvas } = useQRCode();
   return (
     <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card1/card1.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
 
@@ -38,8 +45,22 @@ const cardsImages = ({ name, bussines, contact, url, email, codeqr, address }) =
 
       {/* left side  */}
       {/* qr code */}
+      
       <div className='w-1/3 h-full justify-center  flex flex-col items-start  '>
-        <img src={ codeqr } alt="logo" className='text-center items-center' style={{ width : '78px', height : '77px' }}/>
+        <Canvas
+            text={url}
+            options={{
+            errorCorrectionLevel: 'M',
+            margin: 3,
+            scale: 4,
+            width: 78,
+            height: 77,
+            color: {
+              dark: '#000000',
+              light: '#ffffff',
+            },
+          }}
+        />
       </div>
 
     </div>

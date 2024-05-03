@@ -29,7 +29,7 @@ const ButtonLink = ({ links }) => (
   </a>
 );
 
-const  template2 = ({data}) => {
+const  template3 = ({data}) => {
   // define the links and products
   const links = data.links
   const products = data.products
@@ -63,13 +63,13 @@ const  template2 = ({data}) => {
     <div className="flex justify-center h-auto">
       <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
         {/* header background */}
-            <div className='w-full h-[152px] bg-red-500' style={{ backgroundImage: `url('/card2/backgroundCard.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+            <div className='w-full h-[152px] bg-red-500' style={{ backgroundImage: `url('/card4/backgroundCard.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
             </div>
         <div className='flex flex-col items-center w-full p-8 relative  '>
 
 
         {/* kontainer have card image */}
-        <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card2/card2.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
+        <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card4/card4.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
             <div className='flex justify-between  w-full h-[197px]  items-center '>
 
             {/* right side  */}
@@ -115,7 +115,7 @@ const  template2 = ({data}) => {
         {/* about section  */}
         <div className='flex justify-start flex-col items-start pb-6 w-full mt-[-120px]'>
         <div className='flex w-full items-center pb-4 justify-start'>
-          <img src="card2/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+          <img src="card4/gethub.png" alt="" className='h-[30px] w-[30px]'/>
           <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
             Tentang Saya
           </div>
@@ -129,13 +129,13 @@ const  template2 = ({data}) => {
 
         {/* nama bisnis and social media */}
         <div className='flex justify-start flex-col items-start w-full pb-6'>
-        <div className='flex w-full items-center pb-2 justify-start'>
-          <img src="card2/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+        <div className='flex w-full items-center pb-4 justify-start'>
+          <img src="card4/gethub.png" alt="" className='h-[30px] w-[30px]'/>
           <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
             GetHub Link
           </div>
         </div>
-        <div className='flex relative items-center h-auto w-full'>
+        <div className='flex relative items-center h-auto w-full '>
           <MdChevronLeft onClick={sliderLeftLink} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100' />
           <div id="sliderLink" className='flex overflow-x-scroll w-full h-full whitespace-nowrap scroll scroll-smooth scrollbar-hide gap-2'>
             {links.map((link, index) => (
@@ -151,7 +151,7 @@ const  template2 = ({data}) => {
         {/* product */}
         <div className='flex justify-start flex-col items-start pb-10 w-full'>
             <div className='flex w-full items-center pb-4 justify-start'>
-                <img src="card2/gethub.png" alt="" className='h-[30px] w-[30px]' />
+                <img src="card4/gethub.png" alt="" className='h-[30px] w-[30px]' />
                 <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
                 Produk / Jasa
             </div>
@@ -171,4 +171,4 @@ const  template2 = ({data}) => {
   )
 }
 
-export default  template2
+export default  template3
