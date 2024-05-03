@@ -1,7 +1,7 @@
 import React from 'react'
 const cardsImages = ({ name, bussines, contact, url, email, codeqr, address }) => {
   return (
-    <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card3/card3.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
+    <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card1/card1.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
 
     <div className='flex justify-between  w-full h-[197px]  items-center '>
 

@@ -59,7 +59,7 @@ const page = () => {
          contact = {data.phone} 
          url={`${data.username}.gethub.com`}
          email = {data.email}
-         codeqr = "card3/Code.png" 
+         codeqr = "card1/Code.png" 
          address={data.address}/>
          
         {/* about section  */}

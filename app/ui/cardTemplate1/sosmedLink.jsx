@@ -37,7 +37,7 @@ const sosmedLink = ({ links }) => {
   return (
     <div className='flex justify-start flex-col items-start w-full pb-8'>
         <div className='flex w-full items-center pb-2 justify-start'>
-          <img src="card3/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+          <img src="card1/gethub.png" alt="" className='h-[30px] w-[30px]'/>
           <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
             GetHub Link
           </div>
