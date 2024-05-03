@@ -1,5 +1,5 @@
 import React from 'react'
-const cardsImages = ({ name, bussines, contact, link, email, codeqr, }) => {
+const cardsImages = ({ name, bussines, contact, url, email, codeqr, address }) => {
   return (
     <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card3/card3.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
 
@@ -28,11 +28,11 @@ const cardsImages = ({ name, bussines, contact, link, email, codeqr, }) => {
       {/* link gethub */}
       <div className='flex items-center pb-3'>
           <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2 ' />
-          <p  className="font-normal text-xs text-black">{link}</p>
+          <p  className="font-normal text-xs text-black">{url}</p>
       </div>
 
       {/* location */}
-      <p className='text-black text-xs '> Bogor, Jawa Barat  </p>
+      <p className='text-black text-xs '> { address }  </p>
     </div>
       
 
