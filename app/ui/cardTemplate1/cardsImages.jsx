@@ -1,36 +1,45 @@
 import React from 'react'
-import { AiOutlinePhone, AiOutlineMail, AiOutlineEnvironment } from 'react-icons/ai';
-
-const cardsImages = ({background, name, bussines, contact, location, email, logo, company, tagline, color1, color2  }) => {
+const cardsImages = ({ name, bussines, contact, link, email, codeqr, }) => {
   return (
-    <div className='flex items-center justify-center sm:w-1/4 md:w-1/4 lg:w-auto' style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', width :'auto', height: '240px', backgroundPosition : 'center',borderRadius: '15px'}}>
+    <div className='flex items-center justify-center w-full lg:w-full relative ' style={{ backgroundImage: `url('card3/card3.png')`, backgroundSize: 'cover', backgroundRepeat:'no-repeat', backgroundPosition : 'center',borderRadius: '15px', transform: 'translateY(-70%)'}}>
 
-    <div className='flex justify-between  w-full h-full  items-center '>
+    <div className='flex justify-between  w-full h-[197px]  items-center '>
 
       {/* right side  */}
-      <div className='   flex flex-col justify-center items-start h-full p-4 '>
-      <h1 style={{ color: color1 }} className="font-bold"> {name} </h1>
-      <p className='pb-10 font-medium text-golden'> {bussines} </p>
-      <div className='flex items-center pb-1'>
-          <AiOutlinePhone className="mr-2 text-sm" style={{ color: color1 }} />
-          <p style={{ color: color1 }} className="font-normal text-xs">{contact}</p>
+      <div className='   flex flex-col justify-center items-start h-full w-3/4 p-5 '>
+      <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black"> {name} </h1>
+
+      {/* bussines name */} 
+      <p className='pb-2.5 font-normal text-xs text-black'> {bussines} </p>
+
+
+      {/* phone number */}
+      <div className='flex items-center '>
+          <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2 '  />
+          <p  className=" text-xs text-black">{contact}</p>
       </div>
-      <div className='flex items-center pb-1'>
-          <AiOutlineEnvironment className="mr-2 text-sm" style={{ color: color1 }} />
-          <p style={{ color: color1 }} className="font-normal text-xs">{location}</p>
+
+      {/* email */}
+      <div className='flex items-center '>
+          <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2 '  />
+          <p className="font-normal text-xs text-black">{ email }</p>
       </div>
-      <div className='flex items-center pb-1'>
-          <AiOutlineMail className="mr-2 text-sm" style={{ color: color1 }} />
-          <p style={{ color: color1 }} className="font-normal text-xs">{ email }</p>
+
+      {/* link gethub */}
+      <div className='flex items-center pb-3'>
+          <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2 ' />
+          <p  className="font-normal text-xs text-black">{link}</p>
       </div>
+
+      {/* location */}
+      <p className='text-black text-xs '> Bogor, Jawa Barat  </p>
     </div>
       
 
       {/* left side  */}
-      <div className='w-1/2  flex flex-col items-center p-8  '>
-        <img src={ logo } alt="logo" className='p-2' style={{ width : '312px', height : 'auto' }}/>
-        <h1 className='text-[#DEC364] font-bold text-center '>{company}</h1>
-        <h1 style={{ color: color2 }} className="font-light text-sm text-center"> {tagline} </h1>
+      {/* qr code */}
+      <div className='w-1/3 h-full justify-center  flex flex-col items-start  '>
+        <img src={ codeqr } alt="logo" className='text-center items-center' style={{ width : '78px', height : '77px' }}/>
       </div>
 
     </div>

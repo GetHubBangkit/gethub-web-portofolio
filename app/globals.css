@@ -19,7 +19,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   font-family: 'Poppins', sans-serif;
-  height: auto;
+  height: 120vh;
  
 }
 

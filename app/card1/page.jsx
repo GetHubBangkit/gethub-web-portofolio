@@ -1,44 +1,65 @@
+
 import React from 'react'
 import CardsImages from '../ui/cardTemplate1/cardsImages'
-import BussinesName from '../ui/cardTemplate1/bussinesName'
+import SosmedLink from '../ui/cardTemplate1/sosmedLink'
 import About from '../ui/cardTemplate1/about'
 import Product from '../ui/cardTemplate1/product'
+import Header from '../ui/cardTemplate1/header'
+
+
 
 const page = () => {
+  
+  const links = [
+    { link : 'https://shopee.co.id/', category: 'shopee' },
+    { link : 'https://www.tiktok.com', category: 'tiktok' },
+    { link : 'https://www.tokopedia.com/', category: 'tokopedia' },
+    { link : 'https://www.tokopedia.com/', category: 'tokopedia' },
+  ];
+
+  const products = [
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+  ];
+
+
+
+  
   return (    
-    <div className="flex justify-center">
-      <div className='w-auto p-2 pt-10 flex  flex-col items-center   ' style={{ maxWidth: '472px' }}>
-        
+    <div className="flex justify-center h-auto">
+      <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        {/* header background */}
+        <Header/>
+        <div className='flex flex-col items-center w-full p-8 relative  '>
         {/* kontainer have card image */}
          <CardsImages 
-         background="/card1.png"
-         name = "AHMAD IRVAN M" 
-         bussines = "Designer" 
+         name = "ARMAN JULIANSYAH" 
+         bussines = "Software Engineer" 
          contact = "0983248238324" 
-         location = "Semarang" 
+         link = "icikiwir.gethub.com" 
          email = "icikiwir@gmail.com" 
-         logo = "logo.png" 
-         company = "PT ICIKIWIR" 
-         tagline ="tagline goes here"
-         color1= "white"
-         color2="black"  />
+         codeqr = "card3/Code.png" />
+
+        {/* about section  */}
+         <About 
+          description = 'Saya adalah arsitek digital yang berdedikasi untuk membawa inovasi ke dunia teknolog Dengan pengetahuan mendalam dalam pengembangan perangkat lunak, saya menciptakan solusi yang efektif dan efisien untuk tantangan teknis modern.'
+        />
 
         {/* nama bisnis and social media */}
        
-          <BussinesName 
-          company = "ICIKIWIR JAWA"
-          bussines = "Designer" 
-          />
-
-        {/* about section  */}
-          <About 
-          description = 'lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir lorem ipsum icikiwir.'
-          />
-
+        <SosmedLink links={links} />
 
         {/* product */}
-          <Product/>
-        
+        <Product products={products}/>
+        </div>
         
       </div>
 
