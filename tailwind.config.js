@@ -1,3 +1,5 @@
+const { Montserrat } = require('next/font/google');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -17,6 +19,10 @@ module.exports = {
         'golden': '#DEC364',
       },
     },
+    fontFamily : {
+      poppins: ['Poppins', 'sans-serif'],
+      Montserrat: ['Montserrat', 'sans-serif'],
+    }
   },
   plugins: [
     require('tailwind-scrollbar-hide'),

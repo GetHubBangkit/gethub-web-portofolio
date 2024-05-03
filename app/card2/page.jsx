@@ -8,7 +8,7 @@ import Template6 from '../ui/cardTemplate6/template6'
 const page = () => {
 
     const data = {
-        "theme_hub": 3 ,
+        "theme_hub": 6 ,
         "is_premium": false,
         "username": "armanjuliansyah",
         "name": "Arman Juliansyah",
@@ -26,16 +26,10 @@ const page = () => {
         ],
       
          "products" : [
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-          { image: 'product.png', name: 'Web Inventaris', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+            { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur komunikasi, chatting dengan seseorang dan juga bisa menyimpan data data penting perusahaan, aplikasi ini juga didukung oleh banyak metode pembayaran', price : '5000,00' },
+            { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur komunikasi, chatting dengan seseorang dan juga bisa menyimpan data data penting perusahaan, aplikasi ini juga didukung oleh banyak metode pembayaran', price : '50.000,00' },
+            { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur komunikasi, chatting dengan seseorang dan juga bisa menyimpan data data penting perusahaan, aplikasi ini juga didukung oleh banyak metode pembayaran', price : '15.000,00' },
+            { image: 'product.png', name: 'Web Inventaris', description: 'inventory management System yg didalam nya terdapat fitur komunikasi, chatting dengan seseorang dan juga bisa menyimpan data data penting perusahaan, aplikasi ini juga didukung oleh banyak metode pembayaran', price : '15.000,00' },
         ]
       };
 

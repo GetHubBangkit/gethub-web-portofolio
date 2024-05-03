@@ -6,22 +6,21 @@ import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
 
 // komponen product card 
 const ProductCard = ({ product }) => (
-    <div className='w-44 inline-block h-auto cursor-pointer hover:scale-105 p-2 ease-in-out duration-300' style={{ boxSizing: 'border-box' }}>
-      <img className='rounded-2xl rounded-b-none bg-white w-44 h-32' src={product.image} alt='Product' />
-      <h1 className='mt-4 font-bold text-xs text-black'>{product.name}</h1>
-      <p className='text-black text-xs' style={{ whiteSpace: 'normal' }}>{product.description}</p>
-    </div>
-  );
+  <div className='w-44 inline-block h-auto cursor-pointer hover:scale-105 p-2 ease-in-out duration-300 '>
+    <img className='rounded-2xl rounded-b-none bg-white w-44 h-32' src={product.image} alt='Product' />
+    <h1 className='mt-4 font-bold text-xs text-[#357CEE]'>Rp. {product.price}</h1>
+    <h1 className=' font-bold text-xs text-black mb-2'>{product.name}</h1>
+    <p className='text-black text-xs line-clamp-3'>{product.description}</p>
+  </div>
+);
 
-
-// buttonlink component
 // buttonlink component
 const ButtonLink = ({ links }) => (
   <a href={ links.link }>
-    <button className=' bg-white text-white  w-[144px] h-[52px] rounded-3xl flex justify-center items-center shadow'>
+    <button className=' bg-[#D2EEFC] text-white  w-80 h-[52px] rounded-3xl flex justify-center items-center shadow'>
       <img src={
         links.category === 'tiktok' ? 'tiktok.png' :
-        links.category === 'tokopedia' ? 'tokped.png' :
+        links.category === 'tokopedia' ? 'tokped2.png' :
         links.category === 'shopee' ? 'shopee.png' :
         'ig.png'
       } alt={links.category} className='' />
@@ -63,7 +62,7 @@ const  template3 = ({data}) => {
     <div className="flex justify-center h-auto">
       <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
         {/* header background */}
-            <div className='w-full h-[152px] bg-red-500' style={{ backgroundImage: `url('/card6/backgroundCard.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+            <div className='w-full h-[152px] ' style={{ backgroundImage: `url('/card6/backgroundCard.png')`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
             </div>
         <div className='flex flex-col items-center w-full p-8 relative  '>
 
@@ -113,57 +112,49 @@ const  template3 = ({data}) => {
         </div>
          
         {/* about section  */}
-        <div className='flex justify-start flex-col items-start pb-6 w-full mt-[-120px]'>
-        <div className='flex w-full items-center pb-4 justify-start'>
-          <img src="card6/gethub.png" alt="" className='h-[30px] w-[30px]'/>
-          <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
-            Tentang Saya
-          </div>
-            
-        </div>
-        <div className='font-normal text-black text-xs w-full text-wrap'>
+        <div className='flex justify-start flex-col items-start align-center pb-6 w-full mt-[-120px]'>
+        <div className='font-medium text-black text-center items-center text-xs w-full text-wrap'>
           {data.about}
         </div>
         </div>
-
-
-        {/* nama bisnis and social media */}
-        <div className='flex justify-start flex-col items-start w-full pb-6'>
-        <div className='flex w-full items-center pb-4 justify-start'>
-          <img src="card6/gethub.png" alt="" className='h-[30px] w-[30px]'/>
-          <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
-            GetHub Link
-          </div>
-        </div>
-        <div className='flex relative items-center h-auto w-full'>
-          <MdChevronLeft onClick={sliderLeftLink} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100' />
-          <div id="sliderLink" className='flex overflow-x-scroll w-full h-full whitespace-nowrap scroll scroll-smooth scrollbar-hide gap-2'>
-            {links.map((link, index) => (
-              <ButtonLink key={index} links={link} />
-            ))}
-          </div>
-          <MdChevronRight onClick={sliderRightLink} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100'/>
-        </div>
-        </div>
-
 
 
         {/* product */}
         <div className='flex justify-start flex-col items-start pb-10 w-full'>
             <div className='flex w-full items-center pb-4 justify-start'>
                 <img src="card6/gethub.png" alt="" className='h-[30px] w-[30px]' />
-                <div className='text-xl font-semibold text-black w-full flex items-center justify-start ml-2 h-full '>
+                <div className='text-xl font-bold text-[#357CEE] w-full flex items-center justify-start ml-2 h-full '>
                 Produk / Jasa
             </div>
         </div>
         <div className='flex relative items-center  h-auto w-full'>
             <MdChevronLeft onClick={sliderLeftProduct} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
-            <div id="slider" className='overflow-x-scroll h-full w-full whitespace-nowrap scroll scroll-smooth scrollbar-hide'>
+              <div id="slider" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
                 {products.map((product, index) => <ProductCard key={index} product={product} />)}
-            </div> 
+              </div> 
             <MdChevronRight onClick={sliderRightProduct} size={20} color='black' className='opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
         </div>
         </div>
+
+
+
+         {/* nama bisnis and social media */}
+         <div className='flex justify-start flex-col items-start w-full pb-6'>
+        <div className='flex w-full items-center pb-4 justify-start'>
+          <img src="card6/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+          <div className='text-xl font-bold text-black w-full flex items-center justify-start ml-2 h-full '>
+          Get <span className='text-black text-xl' style={{color: '#357CEE'}}> Hub Link </span>
+          </div>
+        </div>
+        <div className='flex relative items-center h-auto w-full'>
+          <div id="sliderLink" className='flex flex-col justify-center items-center gap-6 w-full'>
+            {links.map((link, index) => (
+              <ButtonLink key={index} links={link} />
+            ))}
+          </div>
+        </div>
+        </div>
+
         </div>
         </div>
         </div>
