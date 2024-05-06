@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         'regal-blue': '#243c5a',
         'golden': '#DEC364',
+        'pink' : '#F08A8A',
       },
     },
     fontFamily : {
