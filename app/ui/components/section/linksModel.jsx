@@ -19,13 +19,13 @@ const sliderRight = () => {
 // buttonlink component horizontal
 const ButtonLinkHorizontal = ({ sosmedLink }) => (
   <a href={ sosmedLink.link }>
-    <button className='     w-[144px] h-[52px] rounded-3xl flex justify-center items-center shadow'>
+    <button className='w-[144px] h-[52px] rounded-3xl flex justify-center items-center shadow'>
       <img src={
         sosmedLink.category === 'tiktok' ? 'tiktok.png' :
         sosmedLink.category === 'tokopedia' ? 'tokped.png' :
         sosmedLink.category === 'shopee' ? 'shopee.png' :
-        'ig.png'
-      } alt={sosmedLink.category} className='' />
+        'tiktok.png'
+      }  className='' />
     </button>
   </a>
 );
@@ -38,8 +38,8 @@ const ButtonLinkVertical = ({ sosmedLink, color }) => (
         sosmedLink.category === 'tiktok' ? 'tiktok.png' :
         sosmedLink.category === 'tokopedia' ? 'tokped.png' :
         sosmedLink.category === 'shopee' ? 'shopee.png' :
-        'ig.png'
-      } alt={sosmedLink.category} className='' />
+        'tiktok.png'
+      }  className='' />
     </button>
   </a>
 );
@@ -52,8 +52,8 @@ const ButtonLinkGrid = ({ sosmedLink }) => (
           sosmedLink.category === 'tiktok' ? '/card4/tiktok.png' :
           sosmedLink.category === 'tokopedia' ? '/card4/tokped.png' :
           sosmedLink.category === 'shopee' ? '/card4/shopee.png' :
-          'ig.png'
-        } alt={sosmedLink.category} className='' />
+          '/card4/shopee.png'
+        }  className='' />
       </button>
     </a>
   );

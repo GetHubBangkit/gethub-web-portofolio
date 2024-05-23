@@ -33,7 +33,7 @@ const cardModel1 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-black'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -45,7 +45,7 @@ const cardModel1 = (data) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-black">{data.name}</p>
+                <p className="font-normal text-xs text-black">{data.full_name}</p>
               </div>
               <p className='text-black text-xs'>{data.address}</p>
             </div>
@@ -53,7 +53,7 @@ const cardModel1 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -88,7 +88,7 @@ const cardModel2 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-white'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -100,7 +100,7 @@ const cardModel2 = (data) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-white">{data.name}</p>
+                <p className="font-normal text-xs text-white">{data.full_name}</p>
               </div>
               <p className='text-white text-xs'>{data.address}</p>
             </div>
@@ -108,7 +108,7 @@ const cardModel2 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -143,7 +143,7 @@ const cardModel3 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-white'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -155,7 +155,7 @@ const cardModel3 = (data) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-white">{data.name}</p>
+                <p className="font-normal text-xs text-white">{data.full_name}</p>
               </div>
               <p className='text-white text-xs'>{data.address}</p>
             </div>
@@ -163,7 +163,7 @@ const cardModel3 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -198,7 +198,7 @@ const cardModel4 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-white'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -210,7 +210,7 @@ const cardModel4 = (data) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-white">{data.name}</p>
+                <p className="font-normal text-xs text-white">{data.full_name}</p>
               </div>
               <p className='text-white text-xs'>{data.address}</p>
             </div>
@@ -218,7 +218,7 @@ const cardModel4 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -253,7 +253,7 @@ const cardModel5 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-black'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -265,7 +265,7 @@ const cardModel5 = (data) => {
               </div>
               <div className='flex items-center pb-1'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-black">{data.name}</p>
+                <p className="font-normal text-xs text-black">{data.full_name}</p>
               </div>
               <p className='text-black text-xs'>{data.address}</p>
             </div>
@@ -273,7 +273,7 @@ const cardModel5 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -308,7 +308,7 @@ const cardModel6 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-black'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -320,7 +320,7 @@ const cardModel6 = (data) => {
               </div>
               <div className='flex items-center pb-3 '>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-black text-wrap ">{data.name}</p>
+                <p className="font-normal text-xs text-black text-wrap ">{data.full_name}</p>
               </div>
               <p className='text-black text-xs'>{data.address}</p>
             </div>
@@ -328,7 +328,7 @@ const cardModel6 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -366,7 +366,7 @@ const premCardModel1 = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-black'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -378,7 +378,7 @@ const premCardModel1 = (data) => {
               </div>
               <div className='flex items-center pb-3 '>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-black text-wrap ">{data.name}</p>
+                <p className="font-normal text-xs text-black text-wrap ">{data.full_name}</p>
               </div>
               <p className='text-black text-xs '>{data.address}</p>
             </div>
@@ -386,7 +386,7 @@ const premCardModel1 = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -421,7 +421,7 @@ const premCardModel2  = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-white">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-white'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -433,7 +433,7 @@ const premCardModel2  = (data) => {
               </div>
               <div className='flex items-center pb-3 '>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-white text-wrap ">{data.name}</p>
+                <p className="font-normal text-xs text-white text-wrap ">{data.full_name}</p>
               </div>
               <p className='text-white text-xs '>{data.address}</p>
             </div>
@@ -441,7 +441,7 @@ const premCardModel2  = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
@@ -477,7 +477,7 @@ const premCardModel3   = (data) => {
           <div className='flex justify-between w-full h-[197px] items-center'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.name}</h1>
+              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg text-black">{data.full_name}</h1>
               <p className='pb-2.5 font-normal text-xs text-black'>{data.bussines}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -489,7 +489,7 @@ const premCardModel3   = (data) => {
               </div>
               <div className='flex items-center pb-3 '>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs text-black text-wrap ">{data.name}</p>
+                <p className="font-normal text-xs text-black text-wrap ">{data.full_name}</p>
               </div>
               <p className='text-black text-xs '>{data.address}</p>
             </div>
@@ -497,7 +497,7 @@ const premCardModel3   = (data) => {
             {/* Left side - QR Code */}
             <div className='w-1/3 h-full justify-center flex flex-col items-start'>
               <QRCodeCanvas
-                text={data.name}
+                text={data.qr_code}
                 options={{
                   errorCorrectionLevel: 'M',
                   margin: 3,
