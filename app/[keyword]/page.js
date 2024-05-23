@@ -3,15 +3,15 @@
 import  { revalidateTag } from 'next/cache';
 
 import React from 'react';
-import Template1 from '../ui/components/templates/template1';
-import Template2 from '../ui/components/templates/template2';
-import Template3 from '../ui/components/templates/template3';
-import Template4 from '../ui/components/templates/template4';
-import Template5 from '../ui/components/templates/template5';
-import Template6 from '../ui/components/templates/template6';
-import PremTemplate1 from '../ui/components/templates/premium/premTemplate1';
-import PremTemplate2 from '../ui/components/templates/premium/premTemplate2';
-import PremTemplate3 from '../ui/components/templates/premium/premTemplate3';
+import Template1 from '../components/templates/template1';
+import Template2 from '../components/templates/template2';
+import Template3 from '../components/templates/template3';
+import Template4 from '../components/templates/template4';
+import Template5 from '../components/templates/template5';
+import Template6 from '../components/templates/template6';
+import PremTemplate1 from '../components/templates/premium/premTemplate1';
+import PremTemplate2 from '../components/templates/premium/premTemplate2';
+import PremTemplate3 from '../components/templates/premium/premTemplate3';
 import getData from '../api/getData';
 
 
