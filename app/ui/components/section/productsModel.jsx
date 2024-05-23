@@ -167,6 +167,53 @@ const productsModel6 = ({products}) => {
 }
 
 
+
+
+// premium product here 
+
+// premium product model 1
+const premProductsModel1 = ({products}) => {
+  return (
+    <div className='flex justify-start flex-col items-start pb-10 w-full'>
+            <div className='flex w-full items-center pb-4 justify-start'>
+                <img src="premium/PremCard1/gethub.png" alt="" className='h-[30px] w-[30px]' />
+                <div className='text-xl font-bold text-[#B67352] w-full flex items-center justify-start ml-2 h-full '>
+                Produk / Jasa
+            </div>
+    </div>
+    <div className='flex relative items-center  h-auto w-full'>
+            <MdChevronLeft onClick={sliderLeft} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
+              <div id="slider" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
+                {products.map((product, index) => <ProductCard key={index} product={product} priceColor='#B67352' />)}
+              </div> 
+            <MdChevronRight onClick={sliderRight} size={20} color='black' className='opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
+        </div>
+    </div>
+  )
+}
+
+// premium product model 3
+const premProductsModel3 = ({products}) => {
+  return (
+    <div className='flex justify-start flex-col items-start pb-10 w-full'>
+            <div className='flex w-full items-center pb-4 justify-start'>
+                <img src="premium/PremCard3/gethub.png" alt="" className='h-[30px] w-[30px]' />
+                <div className='text-xl font-bold text-[#141E61] w-full flex items-center justify-start ml-2 h-full '>
+                Produk / Jasa
+            </div>
+    </div>
+    <div className='flex relative items-center  h-auto w-full'>
+            <MdChevronLeft onClick={sliderLeft} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
+              <div id="slider" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
+                {products.map((product, index) => <ProductCard key={index} product={product} priceColor='#141E61' />)}
+              </div> 
+            <MdChevronRight onClick={sliderRight} size={20} color='black' className='opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
+        </div>
+    </div>
+  )
+}
+
+
 const ProductComponent = {
     productsModel1,
     productsModel2,
@@ -174,6 +221,8 @@ const ProductComponent = {
     productsModel4,
     productsModel5,
     productsModel6,
+    premProductsModel1,
+    premProductsModel3
 }
 
 export default ProductComponent;

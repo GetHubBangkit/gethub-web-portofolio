@@ -173,9 +173,9 @@ const linksModel6 = (data) => {
     return (
           <div className='flex justify-start flex-col items-start w-full pb-6'>
           <div className='flex w-full items-center pb-2 justify-start'>
-              <img src="card5/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+              <img src="card6/gethub.png" alt="" className='h-[30px] w-[30px]'/>
               <div className='text-xl font-bold text-black w-full flex items-center justify-start ml-2 h-full '>
-              Get <span className='text-black text-xl' style={{color: '#F08A8A'}}> Hub Link </span>
+              Get <span className='text-black text-xl' style={{color: '#357DEC'}}> Hub Link </span>
               </div>
           </div>
           <div className='flex relative items-center h-auto w-full'>
@@ -189,6 +189,33 @@ const linksModel6 = (data) => {
     )
 }
 
+
+
+
+// link prem here 
+
+// link premium model 1
+const premLinksModel1 = (data) => {
+  const links = data.links;
+  return (
+        <div className='flex justify-start flex-col items-start w-full pb-6'>
+        <div className='flex w-full items-center pb-2 justify-start'>
+            <img src="premium/premCard1/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+            <div className='text-xl font-bold text-black w-full flex items-center justify-start ml-2 h-full '>
+            Get <span className='text-black text-xl' style={{color: '#B67352'}}> Hub Link </span>
+            </div>
+        </div>
+        <div className='flex relative items-center h-auto w-full'>
+          <div id="sliderLink" className='flex flex-col justify-center items-center gap-6 w-full'>
+            {links.map((link, index) => (
+              <ButtonLinkVertical color= '#F4D09B' key={index} sosmedLink={link} />
+            ))}
+          </div>
+        </div>
+        </div>
+  )
+}
+
 // Export semua komponen dalam satu objek
 const LinksComponents = {
     linksModel1,
@@ -196,7 +223,8 @@ const LinksComponents = {
     linksModel3,
     linksModel4,
     linksModel5,
-    linksModel6
+    linksModel6,
+    premLinksModel1
 
   };
 export default LinksComponents;

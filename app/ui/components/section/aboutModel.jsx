@@ -103,6 +103,30 @@ const aboutModel6 = (data) => {
 }
 
 
+
+
+// Premium Card here
+
+// premium about here
+// premium about 3
+const premAboutModel3 = (data) => {
+    return (
+        <div className='flex justify-start flex-col items-start pb-5 w-full '>
+        <div className='flex w-full items-center pb-4 justify-start'>
+            <img src="premium/PremCard3/gethub.png" alt="" className='h-[30px] w-[30px]'/>
+            <div className='text-xl font-bold text-[#141E61] w-full flex items-center justify-start ml-2 h-full '>
+            Tentang Saya
+            </div>
+        </div>
+        <div className='font-normal text-black text-xs w-full text-wrap'>
+            {data.about}
+        </div>
+        </div>
+    );
+}
+
+
+
 // Export semua komponen dalam satu objek
 const AboutComponents = {
     aboutModel1,
@@ -110,7 +134,8 @@ const AboutComponents = {
     aboutModel3,
     aboutModel4,
     aboutModel5,
-    aboutModel6
+    aboutModel6,
+    premAboutModel3
   };
   
 
