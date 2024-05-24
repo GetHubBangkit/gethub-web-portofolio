@@ -19,9 +19,12 @@ import { Suspense } from 'react'
 
 
 const Page = async ({params}) => {
+
+  
   const { keyword }  = params;
 
   const response = await getData(keyword);
+
   console.log(response)
   if (response.error_code) {
     const message = response.message
@@ -72,7 +75,7 @@ const Page = async ({params}) => {
 
     return (
       <div>
-        <Suspense fallback={<p>Loading feed...</p>}>
+        <Suspense fallback={<p>Loading data...</p>}>
         {dataUser && <Template {...dataUser} />}
         </Suspense>
       </div>
