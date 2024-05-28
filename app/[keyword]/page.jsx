@@ -2,7 +2,7 @@
 
 import React, { Suspense } from 'react';
 import { StandardTemplate1, StandardTemplate2, StandardTemplate3, StandardTemplate4, StandardTemplate5, StandardTemplate6 } from '../components/templates/standardTemplates';
-import { PremiumTemplate1, PremiumTemplate2, PremiumTemplate3 } from '../components/templates/premiumTemplates';
+import { PremiumTemplate1, PremiumTemplate2, PremiumTemplate3, PremiumTemplate4, PremiumTemplate5, PremiumTemplate6 } from '../components/templates/premiumTemplates';
 import NotFoundUser from '../components/section/notFound';
 import getData from '../api/getData';
 
@@ -42,6 +42,15 @@ const Page = async ({ params }) => {
         break;
       case 9:
         Template = PremiumTemplate3;
+        break;
+      case 10:
+        Template = PremiumTemplate4;
+        break;
+      case 11:
+        Template = PremiumTemplate5;
+        break;
+      case 12:
+        Template = PremiumTemplate6;
         break;
       default:
         Template = StandardTemplate1;
