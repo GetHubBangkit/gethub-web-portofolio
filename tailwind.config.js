@@ -18,6 +18,7 @@ module.exports = {
         'regal-blue': '#243c5a',
         'golden': '#DEC364',
         'pink' : '#F08A8A',
+        'gethub' : '#033047',
       },
     },
     fontFamily : {
