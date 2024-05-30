@@ -28,10 +28,10 @@ const cardModel1 = ({data, textColor}) => {
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
               <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg" style = {{ color : textColor }}>{data.full_name}</h1>
-              <p className='pb-2.5 font-normal text-xs' style = {{ color : textColor }} >{data.bussines}</p>
+              <p className='pb-2.5 font-normal text-xs' style = {{ color : textColor }} >{data.profession}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="text-xs" style = {{ color : textColor }}>{data.phone}</p>
+                <p className="text-xs" style = {{ color : data.phone ? textColor : 'red' }}>{data.phone ? data.phone : '( Nomor telepon belum diisi )'}</p>
               </div>
               <div className='flex items-center'>
                 <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2' />
@@ -41,7 +41,7 @@ const cardModel1 = ({data, textColor}) => {
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
                 <p className="font-normal text-xs" style = {{ color : textColor }}>{data.full_name}</p>
               </div>
-              <p className='text-xs' style = {{ color : textColor }}>{data.address}</p>
+              <p className='text-xs' style = {{ color : data.address ? textColor : 'red' }}>{data.address ? data.address : '( Alamat belum diisi )'}</p>
             </div>
             
             {/* Left side - QR Code */}

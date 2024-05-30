@@ -10,8 +10,8 @@ const aboutModel1 = (data) => {
             Tentang Saya
             </div>
         </div>
-        <div className='font-normal text-black text-xs w-full text-wrap'>
-            {data.about}
+        <div className='font-normal text-xs w-full text-wrap' style={{ color : data.about ? 'black' : 'red' }}>
+            {data.about ? data.about : 'Deskripsi belum diisi'}
         </div>
         </div>
     );
