@@ -31,7 +31,7 @@ export const ButtonLinkVertical = ({ sosmedLink, color }) => (
         sosmedLink.category === 'tokopedia' ? 'tokped.png' :
         sosmedLink.category === 'shopee' ? 'shopee.png' :
         'tiktok.png'
-      }  className='' />
+      }  className='object-contain p-2' />
     </button>
   </a>
 );

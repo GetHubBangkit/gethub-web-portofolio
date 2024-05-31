@@ -56,7 +56,7 @@ const linksModel2 = ({data, sectionColor, buttonColor}) => {
   return (
       <>
         <Header icon={data.backgroundCard.icon} sectionColor={sectionColor} />
-        <div className='flex relative items-center h-auto w-full'>
+        <div className='flex relative items-center h-auto pb-6 w-full'>
           <div id="sliderLink" className='flex flex-col justify-center items-center gap-6 w-full'>
             {links.map((link, index) => (
               <ButtonLinkVertical color = {buttonColor}  key={index} sosmedLink={link} />

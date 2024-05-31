@@ -5,7 +5,7 @@ const aboutModel1 = (data) => {
     return (
         <div className='flex justify-start flex-col items-start pb-5 w-full mt-[-150px]'>
         <div className='flex w-full items-center pb-4 justify-start'>
-            <img src={data.backgroundCard.icon} alt="" className='h-[30px] w-[30px]'/>
+            <img src={data.background_card.icon} alt="" className='h-[30px] w-[30px]'/>
             <div className='text-xl font-bold text-black w-full flex items-center justify-start ml-2 h-full '>
             Tentang Saya
             </div>
@@ -33,7 +33,7 @@ const aboutModel3 = ({data, sectionColor}) => {
     return (
         <div className='flex justify-start flex-col items-start pb-5 w-full'>
         <div className='flex w-full items-center pb-4 justify-start'>
-            <img src={data.backgroundCard.icon} alt="" className='h-[30px] w-[30px]'/>
+            <img src={data.background_card.icon} alt="" className='h-[30px] w-[30px]'/>
             <div className='text-xl font-bold w-full flex items-center justify-start ml-2 h-full' style = {{ color : sectionColor }}>
             Tentang Saya
             </div>

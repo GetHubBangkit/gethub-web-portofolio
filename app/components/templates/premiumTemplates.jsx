@@ -11,7 +11,7 @@ export const PremiumTemplate1 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto">
             <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
-                <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
+                <CardComponents.cardModel2 {...{data : data, textColor: 'black', qrcolor : '#000'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
                     <ProductComponent.productsModel1 {...{data : data, sectionColor: '#B67352'}} />
@@ -74,7 +74,7 @@ export const PremiumTemplate5 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto">
             <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
-                <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />
+                <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
                     <LinksComponents.linksModel1 {...{data : data, sectionColor: '#7D9B76'}} />

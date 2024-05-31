@@ -20,7 +20,7 @@ const productsModel1 = ({data, sectionColor}) => {
   if(!data || products.length === 0) {
     return (
       <>
-        <Header icon={data?.backgroundCard?.icon} sectionColor={sectionColor} />
+        <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
         <p className="text-red-500 text-xs pb-6">Belum ada Link yang dimasukan, silahkan lengkapi profile 
           terlebih dahulu pada aplikasi GetHub.</p>
       </>
@@ -28,8 +28,8 @@ const productsModel1 = ({data, sectionColor}) => {
   }
   return (
     <>
-    <Header icon={data?.backgroundCard?.icon} sectionColor={sectionColor} />
-      <div className='flex relative items-center  h-auto w-full'>
+    <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
+      <div className='flex relative items-center pb-6 h-auto w-full'>
       <MdChevronLeft onClick={sliderLeftProduct} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
         <div id="slider" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
           {products.map((product, index) => <productUtils.productCard key={index} product={product} priceColor= '#0D6375' />)}
@@ -42,9 +42,9 @@ const productsModel1 = ({data, sectionColor}) => {
 
 const productsModel2 = ({data, sectionColor}) => {
   return (
-    <div className='flex justify-start flex-col items-start pb-10 w-full'>
+    <div className='flex justify-start flex-col items-start pb-6 w-full'>
     <div className='flex w-full items-center pb-4 justify-start'>
-        <img src={data.backgroundCard.icon} alt="" className='h-[30px] w-[30px]' />
+        <img src={data.background_card.icon} alt="" className='h-[30px] w-[30px]' />
         <div className='text-xl font-bold text-black w-full flex items-center justify-start ml-2 h-full ' style={{ color: sectionColor }}>
         Produk / Jasa
       </div>
