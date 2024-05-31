@@ -1,12 +1,12 @@
 'use client';
 
 export const sliderLeftCertificate= () => {
-    var slider = document.getElementById('slider');
+    var slider = document.getElementById('sliderCertificate');
     slider.scrollLeft -= 200;
   };
   
 export const sliderRightCertificate = () => {
-    var slider = document.getElementById('slider');
+    var slider = document.getElementById('sliderCertificate');
     slider.scrollLeft += 200;
 };
 

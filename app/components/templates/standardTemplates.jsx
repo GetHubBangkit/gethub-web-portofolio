@@ -9,8 +9,8 @@ import CertificateComponent from '../section/certificateModel';
 
 export const StandardTemplate1 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#forfont" className="flex justify-center h-screen latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -25,8 +25,8 @@ export const StandardTemplate1 = (data) => {
 
 export const StandardTemplate2 = (data) => {    
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />  
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -41,13 +41,14 @@ export const StandardTemplate2 = (data) => {
 
 export const StandardTemplate3 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel2 {...{data : data, textColor: 'white', qrcolor : '#6207E4'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
                     <LinksComponents.linksModel1 {...{ data : data, sectionColor: '#6207E4'}} /> 
                     <ProductComponent.productsModel2 {...{data : data, sectionColor: '#6207E4'}} />
+                    <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#6207E4' }} />
                 </div>
             </div>
         </div>
@@ -56,14 +57,14 @@ export const StandardTemplate3 = (data) => {
 
 export const StandardTemplate4 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white', qrcolor: '#8F8C89' }} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} /> 
                     <AboutComponents.aboutModel3 {...{data : data, sectionColor : '#53524E'}} />
                     <ProductComponent.productsModel1 {...{data : data, sectionColor: '#53524E'}} />
-                    <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#0D6375' }} />
+                    <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#53524E' }} />
                 </div>
             </div>
         </div>
@@ -72,14 +73,14 @@ export const StandardTemplate4 = (data) => {
 
 export const StandardTemplate5 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black', qrcolor: '#FFD7D7'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} /> 
                     <AboutComponents.aboutModel3 {...{data : data, sectionColor : '#FFB6B6'}} />
                     <ProductComponent.productsModel2 {...{data : data, sectionColor: '#FFB6B6'}} />
-                    <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#0D6375' }} />
+                    <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#FFB6B6' }} />
                 </div>
             </div>
         </div>
@@ -88,14 +89,14 @@ export const StandardTemplate5 = (data) => {
 
 export const StandardTemplate6 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center h-auto">
-            <div className='h-auto flex flex-col items-center px-4 lg:p-0' style={{ width: '430px' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center px-4 lg:p-0 bg-white' style={{ width: '430px' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
                     <ProductComponent.productsModel1 {...{data : data, sectionColor: '#357DEC'}} />
                     <LinksComponents.linksModel2 {...{data : data, sectionColor: '#357DEC', buttonColor : '#D2EEFC'}} /> 
-                    <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#0D6375' }} />
+                    <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#357DEC' }} />
                 </div>
             </div>
         </div>

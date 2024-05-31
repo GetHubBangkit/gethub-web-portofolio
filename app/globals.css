@@ -23,7 +23,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   font-family: 'Poppins';
-  height: 120vh;
+  height: auto;
  
 }
 
@@ -55,4 +55,14 @@ body {
 /* custom font */
 #template2{
   font-family: 'Montserrat', sans-serif;
+}
+
+.latar {
+  background-image: url('/latar.png');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
 }

@@ -20,7 +20,7 @@ const linksModel1 = ({data, sectionColor}) => {
     if(!data || links.length === 0) {
       return (
         <>
-          <Header icon={data?.backgroundCard?.icon} sectionColor={sectionColor} />
+          <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
           <p className="text-red-500 text-xs pb-6">Belum ada Link yang dimasukan, silahkan lengkapi profile 
             terlebih dahulu pada aplikasi GetHub.</p>
         </>
@@ -28,7 +28,7 @@ const linksModel1 = ({data, sectionColor}) => {
     }
     return(
       <>
-        <Header icon={data.backgroundCard.icon} sectionColor={sectionColor} />
+        <Header icon={data.background_card.icon} sectionColor={sectionColor} />
         <div className='flex relative items-center h-auto w-full pb-6'>
           <MdChevronLeft onClick={sliderLeft} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100' />
           <div id="sliderLink" className=' flex overflow-x-scroll w-full h-full whitespace-nowrap scroll scroll-smooth scrollbar-hide gap-2'>
@@ -47,7 +47,7 @@ const linksModel2 = ({data, sectionColor, buttonColor}) => {
   if(!data || links.length === 0) {
     return (
       <>
-        <Header icon={data?.backgroundCard?.icon} sectionColor={sectionColor} />
+        <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
         <p className="text-red-500 text-xs pb-6">Belum ada Link yang dimasukan, silahkan lengkapi profile 
           terlebih dahulu pada aplikasi GetHub.</p>
       </>
@@ -55,7 +55,7 @@ const linksModel2 = ({data, sectionColor, buttonColor}) => {
   }
   return (
       <>
-        <Header icon={data.backgroundCard.icon} sectionColor={sectionColor} />
+        <Header icon={data.background_card.icon} sectionColor={sectionColor} />
         <div className='flex relative items-center h-auto pb-6 w-full'>
           <div id="sliderLink" className='flex flex-col justify-center items-center gap-6 w-full'>
             {links.map((link, index) => (
