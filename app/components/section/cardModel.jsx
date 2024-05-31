@@ -39,7 +39,7 @@ function formatName(fullName) {
   // Jika tidak, mulai singkat nama
   let shortenedName = nameParts[0]; // Ambil nama depan
   for (let i = 1; i < nameParts.length - 1; i++) {
-    shortenedName += ' ' + nameParts[i][0]; // Tambahkan inisial nama tengah
+    shortenedName += ' ' + nameParts[i][0] + '.'; // Tambahkan inisial nama tengah
   }
   shortenedName += ' ' + nameParts[nameParts.length - 1]; // Tambahkan nama belakang
 
