@@ -3,6 +3,9 @@ import React from 'react';
 import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
 import { sliderLeft, sliderRight,ButtonLinkHorizontal, ButtonLinkVertical, ButtonLinkGrid } from '../utils/linkUtils';
 
+const notFilled = {
+  dash: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
+}
 
 const Header = ({ icon, sectionColor }) => (
   <div className='flex justify-start flex-col items-start w-full'>
@@ -21,8 +24,7 @@ const linksModel1 = ({data, sectionColor}) => {
       return (
         <>
           <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-          <p className="text-red-500 text-xs pb-6">Belum ada Link yang dimasukan, silahkan lengkapi profile 
-            terlebih dahulu pada aplikasi GetHub.</p>
+          <p className="text-black text-xs pb-6"> { notFilled.dash }</p>
         </>
       );
     }
@@ -48,8 +50,7 @@ const linksModel2 = ({data, sectionColor, buttonColor}) => {
     return (
       <>
         <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-        <p className="text-red-500 text-xs pb-6">Belum ada Link yang dimasukan, silahkan lengkapi profile 
-          terlebih dahulu pada aplikasi GetHub.</p>
+        <p className="text-black text-xs pb-6">{ notFilled.dash }</p>
       </>
     );
   }
@@ -72,8 +73,7 @@ const linksModel3 = (data) => {
   if(!data || links.length === 0) {
     return (
       <>
-        <p className="text-red-500 text-xs pb-6 mt-[-150px]">Belum ada Link yang dimasukan, silahkan lengkapi profile 
-          terlebih dahulu pada aplikasi GetHub.</p>
+        <p className="text-black text-xs pb-6 mt-[-150px]">{ notFilled.dash }</p>
       </>
     );
   }

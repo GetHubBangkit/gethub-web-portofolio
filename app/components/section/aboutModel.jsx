@@ -1,6 +1,10 @@
 'use client';
 import React from 'react';
 
+const notFilled = {
+    dash: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
+}
+
 const aboutModel1 = (data) => {
     return (
         <div className='flex justify-start flex-col items-start pb-5 w-full mt-[-150px]'>
@@ -10,8 +14,8 @@ const aboutModel1 = (data) => {
             Tentang Saya
             </div>
         </div>
-        <div className='font-normal text-xs w-full text-wrap' style={{ color : data.about ? 'black' : 'red' }}>
-            {data.about ? data.about : 'Deskripsi belum diisi'}
+        <div className='font-normal text-xs w-full text-wrap' style={{ color : data.about ? 'black' : 'black' }}>
+            {data.about ? data.about : notFilled.dash }
         </div>
         </div>
     );
@@ -22,7 +26,7 @@ const aboutModel2 = (data) => {
         <>
         <div className='flex justify-start flex-col items-start align-center pb-6 w-full mt-[-150px]'>
             <div className='font-medium text-black text-center items-center text-xs w-full text-wrap'>
-            {data.about}
+            {data.about ? data.about : notFilled.dash}
             </div>
         </div>
         </>
@@ -39,7 +43,7 @@ const aboutModel3 = ({data, sectionColor}) => {
             </div>
         </div>
         <div className='font-normal text-black text-xs w-full text-wrap'>
-            {data.about}
+            {data.about ? data.about : notFilled.dash }
         </div>
         </div>
     );

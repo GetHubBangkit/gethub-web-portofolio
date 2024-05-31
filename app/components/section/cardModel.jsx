@@ -76,10 +76,10 @@ const cardModel1 = ({data, textColor, qrcolor}) => {
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
               <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(formattedName)}</h1>
-              <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : 'red' }} >{data.profession ? data.profession : 'Profession belum diisi'}</p>
+              <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : textColor }} >{data.profession ? data.profession : '_________________'}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[15px] w-[15px] mr-2' />
-                <p className="text-xs" style = {{ color : data.phone ? textColor : 'red' }}>{data.phone ? data.phone : '( Nomor telepon belum diisi )'}</p>
+                <p className="text-xs" style = {{ color : data.phone ? textColor : textColor }}>{data.phone ? data.phone : '_________________'}</p>
               </div>
               <div className='flex items-center'>
                 <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2' />
@@ -87,9 +87,9 @@ const cardModel1 = ({data, textColor, qrcolor}) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.web ? data.web : '( web belum diisi )'}</p>
+                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.web ? data.web : '_________________'}</p>
               </div>
-              <p className='text-xs' style = {{ color : data.address ? textColor : 'red' }}>{data.address ? data.address : '( Alamat belum diisi )'}</p>
+              <p className='text-xs' style = {{ color : data.address ? textColor : textColor }}>{data.address ? data.address : '_________________'}</p>
             </div>
             
             {/* Left side - QR Code */}
@@ -129,10 +129,10 @@ const cardModel2 = ({data, textColor, qrcolor}) => {
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
               <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(data.full_name)}</h1>
-              <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : 'red' }} >{data.profession ? data.profession : 'Profession belum diisi'}</p>
+              <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : 'black' }} >{data.profession ? data.profession : '_________________'}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[15px] w-[15px] mr-2' />
-                <p className="text-xs" style = {{ color : data.phone ? textColor : 'red' }}>{data.phone ? data.phone : '( Nomor telepon belum diisi )'}</p>
+                <p className="text-xs" style = {{ color : data.phone ? textColor : textColor }}>{data.phone ? data.phone : '_________________'}</p>
               </div>
               <div className='flex items-center'>
                 <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2' />
@@ -140,9 +140,9 @@ const cardModel2 = ({data, textColor, qrcolor}) => {
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.web ? data.web : '( web belum diisi )'}</p>
+                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.web ? data.web : '_________________'}</p>
               </div>
-              <p className='text-xs' style = {{ color : data.address ? textColor : 'red' }}>{data.address ? data.address : '( Alamat belum diisi )'}</p>
+              <p className='text-xs' style = {{ color : data.address ? textColor : textColor }}>{data.address ? data.address : '_________________'}</p>
             </div>
             
             {/* Left side - QR Code */}
