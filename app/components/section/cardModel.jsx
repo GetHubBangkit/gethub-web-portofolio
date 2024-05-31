@@ -19,45 +19,46 @@ function capitalizeWords(str) {
 }
 
 function formatName(fullName) {
-  const maxLength = 20;
+  const maxLength = 21;
 
-  // Pisahkan nama berdasarkan spasi
-  let parts = fullName.split(' ');
+// Pisahkan nama berdasarkan spasi
+let parts = fullName.split(' ');
 
-  // Cari apakah ada gelar di akhir nama
-  let titles = parts.filter(part => /\b[A-Za-z]{2,}\b\./.test(part));
-  let nameParts = parts.filter(part => !/\b[A-Za-z]{2,}\b\./.test(part));
+// Cari apakah ada gelar di akhir nama
+let titles = parts.filter(part => /\b[A-Za-z]{2,}\b\./.test(part));
+let nameParts = parts.filter(part => !/\b[A-Za-z]{2,}\b\./.test(part));
 
-  // Gabungkan nama tanpa gelar
-  let nameWithoutTitles = nameParts.join(' ');
+// Gabungkan nama tanpa gelar
+let nameWithoutTitles = nameParts.join(' ');
 
-  // Jika total panjang nama dan gelar kurang dari atau sama dengan 20 karakter, kembalikan apa adanya
-  if (fullName.length <= maxLength) {
-    return fullName;
-  }
+// Jika total panjang nama dan gelar kurang dari atau sama dengan 20 karakter, kembalikan apa adanya
+if (fullName.length <= maxLength) {
+  return fullName;
+}
 
-  // Jika tidak, mulai singkat nama
-  let shortenedName = nameParts[0]; // Ambil nama depan
-  for (let i = 1; i < nameParts.length - 1; i++) {
-    shortenedName += ' ' + nameParts[i][0] + '.'; // Tambahkan inisial nama tengah
-  }
-  shortenedName += ' ' + nameParts[nameParts.length - 1]; // Tambahkan nama belakang
+// Jika tidak, mulai singkat nama
+let shortenedName = nameParts[0]; // Ambil nama depan
+for (let i = 1; i < nameParts.length - 1; i++) {
+  shortenedName += ' ' + nameParts[i][0] + '.'; // Tambahkan inisial nama tengah
+}
+shortenedName += ' ' + nameParts[nameParts.length - 1]; // Tambahkan nama belakang
 
-  // Tambahkan gelar jika ada
+// Tambahkan gelar jika ada
+if (titles.length > 0) {
+  shortenedName += ' ' + titles.join(' ');
+}
+
+// Jika panjang masih lebih dari batas, singkat tiga kata terakhir menjadi inisial
+if (shortenedName.length > maxLength) {
+  let lastWords = nameParts.slice(-3); // Ambil tiga kata terakhir
+  let initials = lastWords.map(word => word[0]).join('. '); // Ubah menjadi inisial dan gabungkan dengan spasi
+  shortenedName = `${nameParts.slice(0, -3).join(' ')} ${initials}`; // Gabungkan bagian nama yang tidak disingkat dengan inisial
   if (titles.length > 0) {
     shortenedName += ' ' + titles.join(' ');
   }
+}
 
-  // Jika panjang masih lebih dari batas, singkat nama belakang menjadi inisial
-  if (shortenedName.length > maxLength) {
-    let lastNameInitial = nameParts[nameParts.length - 1][0];
-    shortenedName = `${nameParts[0]} ${nameParts[1][0]} ${lastNameInitial}`;
-    if (titles.length > 0) {
-      shortenedName += ' ' + titles.join(' ');
-    }
-  }
-
-  return shortenedName;
+return shortenedName;
 }
 
 
