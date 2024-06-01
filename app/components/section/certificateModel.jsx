@@ -44,6 +44,7 @@ const certificateModel1 = ({data, sectionColor}) => {
 }
 
 const certificateModel2 = ({data, sectionColor}) => {
+  const   certifications = data.certifications;
   if(!data || certifications.length === 0) {
     return (
       <>
