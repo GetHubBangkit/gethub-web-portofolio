@@ -76,7 +76,7 @@ const cardModel1 = ({data, textColor, qrcolor}) => {
           <div className='flex justify-between w-full h-[197px] items-center pb-3'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(formattedName)}</h1>
+              <h1 className="font-bold text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(formattedName)}</h1>
               <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : textColor }} >{data.profession ? data.profession : '_________________'}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[15px] w-[15px] mr-2' />
@@ -130,7 +130,7 @@ const cardModel2 = ({data, textColor, qrcolor}) => {
           <div className='flex justify-between w-full h-[197px] items-center pt-2'>
             {/* Right side */}
             <div className='flex flex-col justify-center items-start h-full w-3/4 p-5'>
-              <h1 className="font-bold text-xs sm:text-xs md:text-xs lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(formattedName)}</h1>
+              <h1 className="font-bold text-lg sm:text-lg md:text-lg lg:text-lg xl:text-lg" style = {{ color : textColor }}>{capitalizeWords(formattedName)}</h1>
               <p className='pb-4 font-normal text-xs' style = {{ color : data.profession? textColor : 'black' }} >{data.profession ? data.profession : '_________________'}</p>
               <div className='flex items-center'>
                 <img src="wa.png" alt="Phone" className='h-[15px] w-[15px] mr-2' />

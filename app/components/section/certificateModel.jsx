@@ -5,7 +5,7 @@ import { sliderLeftCertificate, sliderRightCertificate } from '../utils/certific
 import certificateUtils from '../utils/certificateUtils';
 
 const notFilled = {
-  dash: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
+  dash: 'Silahkan Tambahkan Certificate untuk memperbagus digital portofolio kamu_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
 }
 
 const Header = ({ icon, sectionColor }) => (

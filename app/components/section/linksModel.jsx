@@ -4,7 +4,7 @@ import { MdChevronRight, MdChevronLeft } from 'react-icons/md';
 import { sliderLeft, sliderRight,ButtonLinkHorizontal, ButtonLinkVertical, ButtonLinkGrid } from '../utils/linkUtils';
 
 const notFilled = {
-  dash: '_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
+  dash: 'Silahkan Tambahkan Link untuk memperbagus digital portofolio kamu  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
 }
 
 const Header = ({ icon, sectionColor }) => (
