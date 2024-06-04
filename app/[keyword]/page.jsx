@@ -5,10 +5,14 @@ import { StandardTemplate1, StandardTemplate2, StandardTemplate3, StandardTempla
 import { PremiumTemplate1, PremiumTemplate2, PremiumTemplate3, PremiumTemplate4, PremiumTemplate5, PremiumTemplate6 } from '../components/templates/premiumTemplates';
 import NotFoundUser from '../components/section/notFound';
 import getData from '../api/getData';
+import postData from '../api/postData';
 
 const Page = async ({ params }) => {
   const { keyword } = params;
   const response = await getData(keyword);
+  const postResponse = await postData(keyword);
+  console.log(postResponse);
+
   if (response.error_code) {
     const message = response.message;
     return <NotFoundUser message={message} />;

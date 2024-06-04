@@ -24,6 +24,7 @@ body {
   color: rgb(var(--foreground-rgb));
   font-family: 'Poppins';
   height: auto;
+  min-height: 100vh;
  
 }
 
