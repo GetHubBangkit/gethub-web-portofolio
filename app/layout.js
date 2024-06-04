@@ -1,5 +1,9 @@
   import { Inter } from "next/font/google";
+  import { Suspense } from 'react'
+  import Skeleton from 'react-loading-skeleton'
+  import 'react-loading-skeleton/dist/skeleton.css'
   import "./globals.css";
+  import Loading from './Loading';
 
   
 
@@ -10,8 +14,14 @@
 
   export default function RootLayout({ children }) {
     return (
+      
       <html lang="en">
-        <body >{children}</body>
+        <body >
+          <Suspense fallback={<Loading />}>
+          {children}
+          </Suspense>
+        </body>
       </html>
+      
     );
   }

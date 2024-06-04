@@ -57,9 +57,7 @@ const Page = async ({ params }) => {
     }
     return (
       <div>
-        <Suspense fallback={<p>Loading data...</p>}>
           {dataUser && <Template {...dataUser} />}
-        </Suspense>
       </div>
     );
   }
