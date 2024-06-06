@@ -65,20 +65,51 @@ const Page = ({ params }) => {
 
   const generatePDF = () => {
     if (imagesLoaded) {
-      const input = document.getElementById('contract-content');
+      const input = contractRef.current;
+      const printButton = document.querySelector('#print-button');
+  
+      // Menyembunyikan tombol sebelum mengambil gambar
+      if (printButton) {
+        printButton.style.display = 'none';
+      }
+  
       html2canvas(input, { scale: 2 }).then((canvas) => {
         const imgData = canvas.toDataURL('image/png'); // Menghasilkan data URL dari canvas
         const pdf = new jsPDF('p', 'mm', 'a4');
   
-        // Adjust the scale of the PDF
-        const scale = 1.5; // Change this value to scale the PDF
-        const pdfWidth = pdf.internal.pageSize.getWidth() * scale;
-        const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+        // Mendapatkan dimensi dari canvas
+        const contentWidth = canvas.width;
+        const contentHeight = canvas.height;
   
-        pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+        // Menentukan ukuran PDF
+        const pdfWidth = pdf.internal.pageSize.getWidth();
+        const pdfHeight = pdf.internal.pageSize.getHeight();
+  
+        // Menentukan rasio skala untuk menyesuaikan konten ke satu halaman PDF
+        const scale = Math.min(pdfWidth / contentWidth, pdfHeight / contentHeight);
+  
+        const scaledWidth = contentWidth * scale ;
+        const scaledHeight = contentHeight * scale;
+  
+        // Menghitung margin untuk memusatkan konten
+        const marginX = (pdfWidth - scaledWidth) / 2;
+        const marginY = (pdfHeight - scaledHeight) / 2;
+  
+        // Menambahkan gambar ke PDF dengan ukuran yang diskalakan dan dipusatkan
+        pdf.addImage(imgData, 'PNG', marginX, marginY, scaledWidth, scaledHeight);
+  
         pdf.save('contract.pdf');
+        
+        // Menampilkan kembali tombol setelah proses pengambilan gambar selesai
+        if (printButton) {
+          printButton.style.display = 'block';
+        }
       }).catch((error) => {
         console.error("Error generating PDF: ", error);
+        // Menampilkan kembali tombol jika terjadi kesalahan
+        if (printButton) {
+          printButton.style.display = 'block';
+        }
       });
     } else {
       alert('Images are not loaded yet');
@@ -136,11 +167,10 @@ const Page = ({ params }) => {
             <ul key={index} className="mb-4 list-disc">
               <li className=" font-semibold text-black mb-2">Tonggak {milestone.task_number}:</li>
               <p className="text-black">Deskripsi: {milestone.task_description}</p>
-              <p className="text-black">Tenggat Waktu: {milestone.due_date}</p>
             </ul>
           ))}
         </div>
-        <h2 className="text-xl font-bold mb-2 text-black">6. Syarat dan Ketentuan</h2>
+        <h2 className=" font-bold mb-2 text-black">6. Syarat dan Ketentuan</h2>
         <ul className="list-disc pl-6 text-black">
           <li className="mb-2">Freelancer setuju untuk menyelesaikan proyek sesuai dengan spesifikasi dan jadwal yang diuraikan di atas.</li>
           <li className="mb-2">Pemilik Proyek setuju untuk menyediakan semua informasi dan dukungan yang diperlukan kepada Freelancer untuk keberhasilan penyelesaian proyek.</li>
@@ -169,9 +199,10 @@ const Page = ({ params }) => {
           </div>
         </div>
       </div>
-      <button onClick={generatePDF} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button id="print-button" onClick={generatePDF} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Cetak PDF
       </button>
+
     </div>
   );
 };
