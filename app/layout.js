@@ -3,7 +3,7 @@
   import Skeleton from 'react-loading-skeleton'
   import 'react-loading-skeleton/dist/skeleton.css'
   import "./globals.css";
-  import Loading from './Loading';
+  import Loading from './loading';
 
   
 

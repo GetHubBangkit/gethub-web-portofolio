@@ -184,13 +184,13 @@ const Page = ({ params }) => {
 
           </div>
           <div className='flex flex-row  justify-between'>
-            <div className="flex flex-col items-center text-center justify-center align-center">
+            <div className="flex flex-col items-center text-center justify-center align-center w-1/2">
               <div className='h-10'></div>
               <p className="text-black">Tanda Tangan</p>
               <QRCodeCanvas text={contractData.project_owner_name} options={{ level: 'M', margin: 7, scale: 1, width: 100, color: { dark: '#000000FF', light: '#0000' } }} />
               <p className="text-black">{contractData.project_owner_name}</p>
             </div>
-            <div className="flex flex-col items-center text-center justify-center align-center">
+            <div className="flex flex-col items-center text-center justify-center align-center w-1/2">
               <p className="text-black pb-5">{contractData.date_started}</p>
               <p className="text-black">Tanda Tangan</p>
               <QRCodeCanvas text={contractData.freelancer_name} options={{ level: 'M', margin: 7, scale: 1, width: 100, color: { dark: '#000000FF', light: '#0000' } }} />
