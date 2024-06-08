@@ -1,9 +1,9 @@
 name: Deploy to Cloud Run
 
 env:
-  SERVICE_NAME: backend-gethub
+  SERVICE_NAME: gethub-webporto
   PROJECT_ID: practice-123321
-  DOCKER_IMAGE_URL: asia-southeast2-docker.pkg.dev/practice-123321/backend-gethub/backend-gethub
+  DOCKER_IMAGE_URL: asia-southeast2-docker.pkg.dev/practice-123321/gethub-webporto/gethub-webporto
 
 on:
   push:

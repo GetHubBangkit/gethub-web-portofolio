@@ -20,6 +20,7 @@ const Page = ({ params }) => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
   const contractRef = useRef(null);
 
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -43,11 +44,13 @@ const Page = ({ params }) => {
       let loadedCount = 0;
       const checkImagesLoaded = () => {
         loadedCount += 1;
+        console.log(`Image ${loadedCount} loaded`);
         if (loadedCount === images.length) {
+          console.log("All images loaded");
           setImagesLoaded(true);
         }
       };
-
+  
       images.forEach((img) => {
         if (img.complete) {
           checkImagesLoaded();
@@ -58,6 +61,7 @@ const Page = ({ params }) => {
       });
     }
   }, [contractData]);
+  
 
   const generatePDF = () => {
     if (imagesLoaded) {
@@ -69,9 +73,7 @@ const Page = ({ params }) => {
         printButton.style.display = 'none';
       }
   
-      const scale = window.innerWidth < 768 ? 2 : 2;  // Skala untuk HP dan Desktop
-  
-      html2canvas(input, { scale }).then((canvas) => {
+      html2canvas(input, { scale: 2 }).then((canvas) => {
         const imgData = canvas.toDataURL('image/png'); // Menghasilkan data URL dari canvas
         const pdf = new jsPDF('p', 'mm', 'a4');
   
@@ -84,10 +86,10 @@ const Page = ({ params }) => {
         const pdfHeight = pdf.internal.pageSize.getHeight();
   
         // Menentukan rasio skala untuk menyesuaikan konten ke satu halaman PDF
-        const ratio = Math.min(pdfWidth / contentWidth, pdfHeight / contentHeight);
+        const scale = Math.min(pdfWidth / contentWidth, pdfHeight / contentHeight);
   
-        const scaledWidth = contentWidth * ratio;
-        const scaledHeight = contentHeight * ratio;
+        const scaledWidth = contentWidth * scale ;
+        const scaledHeight = contentHeight * scale;
   
         // Menghitung margin untuk memusatkan konten
         const marginX = (pdfWidth - scaledWidth) / 2;
@@ -200,6 +202,7 @@ const Page = ({ params }) => {
       <button id="print-button" onClick={generatePDF} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Cetak PDF
       </button>
+
     </div>
   );
 };
