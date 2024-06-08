@@ -16,7 +16,7 @@ export const ButtonLinkHorizontal = ({ sosmedLink }) => (
       <img src={
         sosmedLink.category === 'tiktok' ? 'tiktok.png' :
         sosmedLink.category === 'tokopedia' ? 'tokped.png' :
-        sosmedLink.category === 'shopee' ? 'shopee.png' :
+        sosmedLink.category === 'Shopee' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png' :
         'tiktok.png'
       }  className='' />
     </button>
@@ -29,7 +29,7 @@ export const ButtonLinkVertical = ({ sosmedLink, color }) => (
       <img src={
         sosmedLink.category === 'tiktok' ? 'tiktok.png' :
         sosmedLink.category === 'tokopedia' ? 'tokped.png' :
-        sosmedLink.category === 'shopee' ? 'shopee.png' :
+        sosmedLink.category === 'Shopee' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png' :
         'tiktok.png'
       }  className='object-contain p-2' />
     </button>
@@ -42,7 +42,7 @@ export const ButtonLinkGrid = ({ sosmedLink }) => (
         <img src={
           sosmedLink.category === 'tiktok' ? '/card4/tiktok.png' :
           sosmedLink.category === 'tokopedia' ? '/card4/tokped.png' :
-          sosmedLink.category === 'shopee' ? '/card4/shopee.png' :
+          sosmedLink.category === 'Shopee' ? '/card4/shopee.png' :
           '/card4/shopee.png'
         }  className='' />
       </button>
