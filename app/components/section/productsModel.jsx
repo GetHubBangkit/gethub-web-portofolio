@@ -56,7 +56,7 @@ const productsModel2 = ({data, sectionColor}) => {
   return (
     <>
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-    <div className='flex relative items-center gap-3 h-auto w-full'>
+    <div className='flex relative items-center gap-3 h-auto w-full pb-6'>
       <div id="slider" className='grid grid-flow-row grid-cols-2 w-full'>
       {data.products.map((product, index) => <productUtils.productCard key={index} product={product} priceColor= '#0D6375' />)}
       </div>
