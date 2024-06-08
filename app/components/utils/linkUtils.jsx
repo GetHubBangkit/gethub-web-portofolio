@@ -14,9 +14,9 @@ export const ButtonLinkHorizontal = ({ sosmedLink }) => (
   <a href={ sosmedLink.link }>
     <button className='w-[144px] h-[52px] rounded-3xl flex justify-center items-center shadow'>
       <img src={
-        sosmedLink.category === 'tiktok' ? 'tiktok.png' :
-        sosmedLink.category === 'tokopedia' ? 'tokped.png' :
-        sosmedLink.category === 'Shopee' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png' :
+        sosmedLink.category === 'tiktok' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png':
+        sosmedLink.category === 'tokopedia' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png':
+        sosmedLink.category === 'shopee' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%202/shopee2.png':
         'tiktok.png'
       }  className='' />
     </button>
