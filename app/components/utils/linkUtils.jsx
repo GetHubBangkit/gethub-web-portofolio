@@ -54,10 +54,17 @@ export const ButtonLinkGrid = ({ sosmedLink }) => (
     <a href={ sosmedLink.link }>
       <button className='bg-white text-white w-[60px] h-[35px] rounded-md flex justify-center items-center shadow-lg'>
         <img src={
-          sosmedLink.category === 'tiktok' ? '/card4/tiktok.png' :
-          sosmedLink.category === 'tokopedia' ? '/card4/tokped.png' :
-          sosmedLink.category === 'Shopee' ? '/card4/shopee.png' :
-          '/card4/shopee.png'
+        sosmedLink.category === 'figma' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/figma1.png' :
+        sosmedLink.category === 'github' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/github1.png' :
+        sosmedLink.category === 'instagram' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/instagram1.png' :
+        sosmedLink.category === 'linkedin' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/linkedin1.png' :
+        sosmedLink.category === 'gitlab' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/gitlab1.png' :
+        sosmedLink.category === 'jupyternotebook' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/jupyternotebook1.png' :
+        sosmedLink.category === 'youtube' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/youtube1.png' :
+        sosmedLink.category === 'tiktok' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/tiktok1.png' :
+        sosmedLink.category === 'tokopedia' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/tokopedia1.png' :
+        sosmedLink.category === 'shopee' ? 'https://storage.googleapis.com/gethub_bucket/link_category/logo%201/Shopee1.png' :
+        'notfound.png'
         }  className='' />
       </button>
     </a>
