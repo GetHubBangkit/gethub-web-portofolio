@@ -84,7 +84,7 @@ const cardModel1 = ({data, textColor, qrcolor}) => {
               </div>
               <div className='flex items-center'>
                 <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.email}</p>
+                <p className="font-normal text-xs overflow-hidden truncate" style = {{ color : textColor }}>{data.email}</p>
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
@@ -138,7 +138,7 @@ const cardModel2 = ({data, textColor, qrcolor}) => {
               </div>
               <div className='flex items-center'>
                 <img src="gmail.png" alt="email" className='h-[13px] w-[13px] mr-2' />
-                <p className="font-normal text-xs" style = {{ color : textColor }}>{data.email}</p>
+                <p className="font-normal text-xs overflow-hidden truncate" style = {{ color : textColor }}>{data.email}</p>
               </div>
               <div className='flex items-center pb-3'>
                 <img src="link.png" alt="Phone" className='h-[13px] w-[13px] mr-2' />
