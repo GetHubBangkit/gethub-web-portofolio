@@ -5,7 +5,7 @@ import { sliderLeftProduct, sliderRightProduct } from '../utils/productUtils';
 import productUtils from '../utils/productUtils';
 
 const notFilled = {
-  dash: 'Silahkan Tambahkan Product untuk memperbagus digital portofolio kamu_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
+  dash: 'Silahkan Tambahkan product untuk memperbagus digital portofolio kamu _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _'
 }
 
 const Header = ({ icon, sectionColor }) => (
