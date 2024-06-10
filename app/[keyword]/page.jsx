@@ -6,18 +6,30 @@ import { PremiumTemplate1, PremiumTemplate2, PremiumTemplate3, PremiumTemplate4,
 import NotFoundUser from '../components/section/notFound';
 import getData from '../api/getData';
 import postData from '../api/postData';
+import _ from 'lodash'; // lodash library for easy manipulation of arrays and objects
 
 const Page = async ({ params }) => {
   const { keyword } = params;
   const response = await getData(keyword);
   const postResponse = await postData(keyword);
-  console.log(postResponse);
+  console.log(response);
 
   if (response.error_code) {
     const message = response.message;
     return <NotFoundUser message={message} />;
   } else {
-    const dataUser = response.data;
+    let dataUser = response.data;
+    // Check if user is not premium
+    if (!dataUser.is_premium) {
+      // Create a new object with the modified data
+      const modifiedDataUser = {
+        ...dataUser,
+        products: _.take(dataUser.products, 5),
+        certifications: _.take(dataUser.certifications, 5),
+      };
+      dataUser = modifiedDataUser;
+    }
+
     let Template;
     switch (dataUser.theme_hub) {
       case 1:
