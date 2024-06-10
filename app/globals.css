@@ -68,3 +68,25 @@ body {
   justify-content: center;
 }
 
+.watermarked {
+  position: relative;
+  z-index: 1; /* Ensure it stays above the background but below other content */
+}
+
+.watermarked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://storage.googleapis.com/gethub_bucket/Icons/gethubLogo.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.1;
+  z-index: -1; /* Ensure it stays behind the content */
+  pointer-events: none; /* Make sure the watermark doesn't interfere with any content interaction */
+}
+
+

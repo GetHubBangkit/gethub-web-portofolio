@@ -29,7 +29,7 @@ const Page = async ({ params }) => {
       };
       dataUser = modifiedDataUser;
     }
-
+    
     let Template;
     switch (dataUser.theme_hub) {
       case 1:
