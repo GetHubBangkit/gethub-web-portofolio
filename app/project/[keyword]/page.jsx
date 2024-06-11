@@ -4,9 +4,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import getDataContractDigital from '../../api/getDataContractDigital';
 import NotFoundUser from '../../components/section/notFound';
 import { useQRCode } from 'next-qrcode';
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
-
+import { useReactToPrint } from 'react-to-print';
 
 // QRCodeCanvas Component
 const QRCodeCanvas = ({ text, options }) => {
@@ -18,7 +16,6 @@ const Page = ({ params }) => {
   const { keyword } = params;
   const [contractData, setContractData] = useState(null);
   const [error, setError] = useState(null);
-  const [imagesLoaded, setImagesLoaded] = useState(false);
   const contractRef = useRef(null);
 
   useEffect(() => {
@@ -38,82 +35,36 @@ const Page = ({ params }) => {
     fetchData();
   }, [keyword]);
 
-  useEffect(() => {
-    if (contractData && contractRef.current) {
-      const images = contractRef.current.querySelectorAll('img');
-      let loadedCount = 0;
-      const checkImagesLoaded = () => {
-        loadedCount += 1;
-        console.log(`Image ${loadedCount} loaded`);
-        if (loadedCount === images.length) {
-          console.log("All images loaded");
-          setImagesLoaded(true);
-        }
-      };
-  
-      images.forEach((img) => {
-        if (img.complete) {
-          checkImagesLoaded();
-        } else {
-          img.onload = checkImagesLoaded;
-          img.onerror = checkImagesLoaded;
-        }
-      });
-    }
-  }, [contractData]);
-  
-  const generatePDF = () => {
-    if (imagesLoaded) {
-      const input = contractRef.current;
-      const printButton = document.querySelector('#print-button');
-  
-      // Menyembunyikan tombol sebelum mengambil gambar
-      if (printButton) {
-        printButton.style.display = 'none';
+  const handlePrint = useReactToPrint({
+    content: () => contractRef.current,
+    documentTitle: 'Contract',
+    pageStyle: `
+      @page {
+        size: A4 portrait;
+        margin: 20mm;
       }
-  
-      html2canvas(input, { scale: 2 }).then((canvas) => {
-        const imgData = canvas.toDataURL('image/png'); // Menghasilkan data URL dari canvas
-        const pdf = new jsPDF('p', 'mm', 'a4');
-  
-        // Mendapatkan dimensi dari canvas
-        const contentWidth = canvas.width;
-        const contentHeight = canvas.height;
-  
-        // Menentukan ukuran PDF
-        const pdfWidth = pdf.internal.pageSize.getWidth();
-        const pdfHeight = pdf.internal.pageSize.getHeight();
-  
-        // Menentukan rasio skala untuk menyesuaikan konten ke satu halaman PDF
-        const scale = Math.min(pdfWidth / contentWidth, pdfHeight / contentHeight);
-  
-        const scaledWidth = contentWidth * scale ;
-        const scaledHeight = contentHeight * scale;
-  
-        // Menghitung margin untuk memusatkan konten
-        const marginX = (pdfWidth - scaledWidth) / 2;
-        const marginY = (pdfHeight - scaledHeight) / 2;
-  
-        // Menambahkan gambar ke PDF dengan ukuran yang diskalakan dan dipusatkan
-        pdf.addImage(imgData, 'PNG', marginX, marginY, scaledWidth, scaledHeight);
-  
-        pdf.save('contract.pdf');
-        
-        // Menampilkan kembali tombol setelah proses pengambilan gambar selesai
-        if (printButton) {
-          printButton.style.display = 'block';
+      @media print {
+        body {
+          -webkit-print-color-adjust: exact;
         }
-      }).catch((error) => {
-        console.error("Error generating PDF: ", error);
-        // Menampilkan kembali tombol jika terjadi kesalahan
-        if (printButton) {
-          printButton.style.display = 'block';
+        .container {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
-      });
-    } else {
-      alert('Images are not loaded yet');
-    }
-  };
+        .contract-content {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+    `
+  });
 
   if (error) {
     return <NotFoundUser message={error} />;
@@ -133,7 +84,7 @@ const Page = ({ params }) => {
 
   return (
     <div className="container mx-auto p-4 my-4 w-full sm:w-full md:w-1/2 lg:w-1/2 shadow-xl shadow-black" ref={contractRef}>
-      <div id="contract-content" className="watermarked shadow-md rounded px-8 pt-6 pb-8 mb-4 watermarked">
+      <div id="contract-content" className="contract-content shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className='pb-8'>
           <img src="https://storage.googleapis.com/gethub_bucket/gethub-logo/gethub-logo.png" alt="GetHub Logo" className="h-10 w-auto" />
         </div>
@@ -197,7 +148,7 @@ const Page = ({ params }) => {
           </div>
         </div>
       </div>
-      <button id="print-button" onClick={generatePDF} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button id="print-button" onClick={handlePrint} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Cetak PDF
       </button>
     </div>
