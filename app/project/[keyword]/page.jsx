@@ -84,7 +84,7 @@ const Page = ({ params }) => {
 
   return (
     <div className="container mx-auto p-4 my-4 w-full sm:w-full md:w-1/2 lg:w-1/2 shadow-xl shadow-black" ref={contractRef}>
-      <div id="contract-content" className="contract-content shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div id="contract-content" className="contract-content shadow-md rounded px-8 pt-6 pb-8 mb-4 watermarked">
         <div className='pb-8'>
           <img src="https://storage.googleapis.com/gethub_bucket/gethub-logo/gethub-logo.png" alt="GetHub Logo" className="h-10 w-auto" />
         </div>
