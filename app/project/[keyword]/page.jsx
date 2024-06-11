@@ -37,7 +37,7 @@ const Page = ({ params }) => {
 
   const handlePrint = useReactToPrint({
     content: () => contractRef.current,
-    documentTitle: 'Contract',
+    documentTitle: 'Contract Digital',
     pageStyle: `
       @page {
         size: A4 portrait;
