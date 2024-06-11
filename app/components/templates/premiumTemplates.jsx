@@ -10,7 +10,7 @@ import CertificateComponent from '../section/certificateModel';
 export const PremiumTemplate1 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar">
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
                 <CardComponents.cardModel2 {...{data : data, textColor: 'black', qrcolor : '#000'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
@@ -26,7 +26,7 @@ export const PremiumTemplate1 = (data) => {
 export const PremiumTemplate2 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar">
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -42,7 +42,7 @@ export const PremiumTemplate2 = (data) => {
 export const PremiumTemplate3 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar">
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} />
@@ -57,7 +57,7 @@ export const PremiumTemplate3 = (data) => {
 export const PremiumTemplate4 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar">
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
@@ -73,7 +73,7 @@ export const PremiumTemplate4 = (data) => {
 export const PremiumTemplate5 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar">
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -89,7 +89,7 @@ export const PremiumTemplate5 = (data) => {
 export const PremiumTemplate6 = (data) => {
     return (
         <div id="#for font" className="flex justify-center h-auto latar" >
-            <div className='h-auto flex flex-col items-center mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} />
