@@ -56,8 +56,8 @@ const certificateModel2 = ({data, sectionColor}) => {
   return (
     <>
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-    <div className='flex relative items-center gap-3 h-auto w-full'>
-      <div id="sliderCertificate" className='grid grid-flow-row grid-cols-2 w-full'>
+    <div className='flex relative items-center justify-center h-auto w-full '>
+      <div id="sliderCertificate" className='grid grid-flow-row grid-cols-2 gap-3 w-full'>
       {data.certifications.map((certificate, index) => <certificateUtils.certificateCard2 key={index} certificate={certificate} priceColor= '#0D6375' />)}
       </div>
     </div>
