@@ -25,8 +25,8 @@ export const StandardTemplate1 = (data) => {
 
 export const StandardTemplate2 = (data) => {    
     return (
-        <div id="#for font" className="flex justify-center sm:mx-4 h-auto latar">
-            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center sm:mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />  
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -41,8 +41,8 @@ export const StandardTemplate2 = (data) => {
 
 export const StandardTemplate3 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center sm:mx-4 h-auto latar">
-            <div className='h-auto flex flex-col items-center lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center sm:mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel2 {...{data : data, textColor: 'white', qrcolor : '#6207E4'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
@@ -57,8 +57,8 @@ export const StandardTemplate3 = (data) => {
 
 export const StandardTemplate4 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center sm:mx-4 h-auto latar">
-            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center sm:mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white', qrcolor: '#8F8C89' }} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} /> 
@@ -73,8 +73,8 @@ export const StandardTemplate4 = (data) => {
 
 export const StandardTemplate5 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center sm:mx-4 h-auto latar">
-            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center sm:mx-4  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black', qrcolor: '#FFD7D7'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} /> 
@@ -89,8 +89,8 @@ export const StandardTemplate5 = (data) => {
 
 export const StandardTemplate6 = (data) => {
     return (
-        <div id="#for font" className="flex justify-center sm:mx-4 h-auto latar">
-            <div className='h-auto flex flex-col items-center  lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
+        <div id="#for font" className="flex justify-center h-auto latar">
+            <div className='h-auto flex flex-col items-center sm:mx-4 lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
