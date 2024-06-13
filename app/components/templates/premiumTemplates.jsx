@@ -14,7 +14,7 @@ export const PremiumTemplate1 = (data) => {
                 <CardComponents.cardModel2 {...{data : data, textColor: 'black', qrcolor : '#000'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
-                    <ProductComponent.productsModel1 {...{data : data, sectionColor: '#B67352'}} />
+                    <ProductComponent.productsModel2 {...{data : data, sectionColor: '#B67352'}} />
                     <LinksComponents.linksModel2 {...{data : data, sectionColor: '#B67352', buttonColor : '#F4D09B'}} />
                     <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#B67352' }} />
                 </div>
@@ -61,7 +61,7 @@ export const PremiumTemplate4 = (data) => {
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel2 {...data} />
-                    <ProductComponent.productsModel1 {...{data : data, sectionColor: '#655AFF'}} />
+                    <ProductComponent.productsModel2 {...{data : data, sectionColor: '#655AFF'}} />
                     <LinksComponents.linksModel2 {...{data : data, sectionColor: '#655AFF', buttonColor : '#655AFF'}} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#655AFF' }} />
                 </div>
@@ -94,7 +94,7 @@ export const PremiumTemplate6 = (data) => {
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} />
                     <AboutComponents.aboutModel3 {...{data : data, sectionColor : '#5C92F4'}} />
-                    <ProductComponent.productsModel1  {...{data : data, sectionColor: '#5C92F4'}}/>
+                    <ProductComponent.productsModel2  {...{data : data, sectionColor: '#5C92F4'}}/>
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#5C92F4' }} />
                 </div>
             </div>

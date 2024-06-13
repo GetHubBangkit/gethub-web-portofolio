@@ -15,7 +15,7 @@ export const StandardTemplate1 = (data) => {
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
                     <LinksComponents.linksModel1 {...{ data : data, sectionColor: '#0D6375'}} /> 
-                    <ProductComponent.productsModel1 {...{ data: data, sectionColor: '#0D6375' }} />
+                    <ProductComponent.productsModel2 {...{ data: data, sectionColor: '#0D6375' }} />
                     <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#0D6375' }} />
                 </div>
             </div>
@@ -30,7 +30,7 @@ export const StandardTemplate2 = (data) => {
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />  
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <AboutComponents.aboutModel1 {...data} />
-                    <ProductComponent.productsModel1 {...{ data: data, sectionColor: '#4B7328' }} />
+                    <ProductComponent.productsModel2 {...{ data: data, sectionColor: '#4B7328' }} />
                     <LinksComponents.linksModel2 {...{ data : data, sectionColor: '#4B7328', buttonColor : '#99E05B'}} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#4B7328' }} />
                 </div>
@@ -63,7 +63,7 @@ export const StandardTemplate4 = (data) => {
                 <div className='flex flex-col items-center w-full px-8 relative'>
                     <LinksComponents.linksModel3 {...data} /> 
                     <AboutComponents.aboutModel3 {...{data : data, sectionColor : '#53524E'}} />
-                    <ProductComponent.productsModel1 {...{data : data, sectionColor: '#53524E'}} />
+                    <ProductComponent.productsModel2 {...{data : data, sectionColor: '#53524E'}} />
                     <CertificateComponent.certificateModel1 {...{ data: data, sectionColor: '#53524E' }} />
                 </div>
             </div>
