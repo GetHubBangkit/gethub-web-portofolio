@@ -32,12 +32,12 @@ const productsModel1 = ({data, sectionColor}) => {
   return (
     <>
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-      <div className='flex relative items-center pb-6 h-auto w-full'>
-      <MdChevronLeft onClick={sliderLeftProduct} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
-        <div id="slider" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
+      <div className='flex relative items-center justify-center pb-6 h-auto w-full '>
+      <MdChevronLeft onClick={sliderLeftProduct} size={20} color='black' className='hidden md:block opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
+        <div id="slider" className='w-64 sm:w-full grid grid-flow-col overflow-x-scroll scroll scroll-smooth scrollbar-hide'>
           {products.map((product, index) => <productUtils.productCard key={index} product={product} priceColor= '#0D6375' />)}
         </div> 
-      <MdChevronRight onClick={sliderRightProduct} size={20} color='black' className='opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
+        <MdChevronRight onClick={sliderRightProduct} size={20} color='black' className='hidden md:block opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
       </div>
     </>
   )
@@ -58,7 +58,7 @@ const productsModel2 = ({data, sectionColor}) => {
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
     <div className='flex relative items-center gap-3 h-auto w-full pb-6'>
       <div id="slider" className='grid grid-flow-row grid-cols-2 w-full'>
-      {data.products.map((product, index) => <productUtils.productCard key={index} product={product} priceColor= '#0D6375' />)}
+      {data.products.map((product, index) => <productUtils.productCard2 key={index} product={product} priceColor= '#0D6375' />)}
       </div>
     </div>
     </>
