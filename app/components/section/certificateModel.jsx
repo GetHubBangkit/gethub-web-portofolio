@@ -32,12 +32,12 @@ const certificateModel1 = ({data, sectionColor}) => {
   return (
     <>
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-      <div className='flex relative items-center  h-auto w-full'>
-      <MdChevronLeft onClick={sliderLeftCertificate} size={20} color='black' className='opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
+    <div className='flex relative items-center justify-center pb-6 h-auto w-full '>
+      <MdChevronLeft onClick={sliderLeftCertificate} size={20} color='black' className='hidden md:block opacity-50 cursor-pointer hover:opacity-100 bg-transparent p-0' />
         <div id="sliderCertificate" className='grid grid-flow-col overflow-x-scroll  w-full scroll scroll-smooth scrollbar-hide'>
           {certifications.map((certificate, index) => <certificateUtils.certificateCard key={index} certificate={certificate} priceColor= '#0D6375' />)}
         </div> 
-      <MdChevronRight onClick={sliderRightCertificate} size={20} color='black' className='opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
+        <MdChevronRight onClick={sliderRightCertificate} size={20} color='black' className='hidden md:block opacity-50 cursor-pointer h-4 hover:opacity-100  h- p-0'/>
       </div>
     </>
   )
@@ -56,8 +56,8 @@ const certificateModel2 = ({data, sectionColor}) => {
   return (
     <>
     <Header icon={data?.background_card?.icon} sectionColor={sectionColor} />
-    <div className='flex relative items-center justify-center h-auto w-full '>
-      <div id="sliderCertificate" className='grid grid-flow-row grid-cols-2 gap-3 w-full'>
+    <div className='flex relative items-center gap-3 h-auto w-full pb-6'>
+      <div id="sliderCertificate" className='grid grid-flow-row grid-cols-2 w-full'>
       {data.certifications.map((certificate, index) => <certificateUtils.certificateCard2 key={index} certificate={certificate} priceColor= '#0D6375' />)}
       </div>
     </div>
