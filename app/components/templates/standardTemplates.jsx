@@ -13,8 +13,8 @@ export const StandardTemplate1 = (data) => {
             <div className='h-auto flex flex-col items-center   lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
-                    <LinksComponents.linksModel3 {...{ data : data, sectionColor: '#0D6375'}} /> 
-                    <AboutComponents.aboutModel3 {...data} />
+                    <LinksComponents.linksModel3  {...data} /> 
+                    <AboutComponents.aboutModel3 {...{ data : data, sectionColor: '#0D6375'}} />
                     <ProductComponent.productsModel2 {...{ data: data, sectionColor: '#0D6375' }} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#0D6375' }} />
                 </div>
@@ -29,8 +29,8 @@ export const StandardTemplate2 = (data) => {
             <div className='h-auto flex flex-col items-center   lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'white'}} />  
                 <div className='flex flex-col items-center w-full px-8 relative'>
-                    <LinksComponents.linksModel3 {...{ data : data, sectionColor: '#4B7328', buttonColor : '#99E05B'}} />
-                    <AboutComponents.aboutModel3 {...data} />
+                    <LinksComponents.linksModel3 {...data} />
+                    <AboutComponents.aboutModel3 {...{ data : data, sectionColor: '#4B7328', buttonColor : '#99E05B'}}  />
                     <ProductComponent.productsModel2 {...{ data: data, sectionColor: '#4B7328' }} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#4B7328' }} />
                 </div>
@@ -45,8 +45,8 @@ export const StandardTemplate3 = (data) => {
             <div className='h-auto flex flex-col items-center   lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel2 {...{data : data, textColor: 'white', qrcolor : '#6207E4'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
-                    <LinksComponents.linksModel3 {...{ data : data, sectionColor: '#6207E4'}} /> 
-                    <AboutComponents.aboutModel3 {...data} />
+                    <LinksComponents.linksModel3 {...data}  /> 
+                    <AboutComponents.aboutModel3  {...{ data : data, sectionColor: '#6207E4'}}/>
                     <ProductComponent.productsModel2 {...{data : data, sectionColor: '#6207E4'}} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#6207E4' }} />
                 </div>
@@ -93,8 +93,8 @@ export const StandardTemplate6 = (data) => {
             <div className='h-auto flex flex-col items-center   lg:p-0 bg-white' style={{ width: '430px', minHeight: '110vh' }}>
                 <CardComponents.cardModel1 {...{data : data, textColor: 'black'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
-                    <LinksComponents.linksModel3 {...{data : data, sectionColor: '#357DEC', buttonColor : '#D2EEFC'}} /> 
-                    <AboutComponents.aboutModel3 {...data} />
+                    <LinksComponents.linksModel3  {...data}  /> 
+                    <AboutComponents.aboutModel3 {...{data : data, sectionColor: '#357DEC', buttonColor : '#D2EEFC'}} />
                     <ProductComponent.productsModel2 {...{data : data, sectionColor: '#357DEC'}} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#357DEC' }} />
                 </div>
