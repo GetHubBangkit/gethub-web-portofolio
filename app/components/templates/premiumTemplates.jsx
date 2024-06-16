@@ -13,7 +13,7 @@ export const PremiumTemplate1 = (data) => {
             <div className='h-auto flex flex-col items-center   lg:p-0 bg-white' style={{ width: '430px' , minHeight: '110vh'}}>
                 <CardComponents.cardModel2 {...{data : data, textColor: 'black', qrcolor : '#000'}} />
                 <div className='flex flex-col items-center w-full px-8 relative'>
-                    <LinksComponents.linksModel3  {...data} />
+                    <LinksComponents.linksModel3  {...data}/>
                     <AboutComponents.aboutModel3  {...{data : data, sectionColor: '#B67352', buttonColor : '#F4D09B'}}/>
                     <ProductComponent.productsModel2 {...{data : data, sectionColor: '#B67352'}} />
                     <CertificateComponent.certificateModel2 {...{ data: data, sectionColor: '#B67352' }} />
